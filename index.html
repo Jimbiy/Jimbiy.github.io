@@ -4,23 +4,53 @@
 	<style type="text/css">
 
 		#projects{
-			width:400px;
-			height:400px;
+			width:300px;
+			height:390px;
 			background-image:url(https://media4.giphy.com/media/1BeVCTe1d43Yge9ejE/200w.gif?cid=6c09b9528zeird7pkywkavyfvuilt3o139l0iz8gilf1i485&ep=v1_gifs_search&rid=200w.gif);
-			background-size:contain;
+			font:sans-serif;
+			position:relative;
+			border:10px solid maroon;
+			background-size:cover;
 			background-repeat: no-repeat;
 
 		}
 
 		#journal{
-			width:220px;
-			height:340px;
+			width:300px;
+			height:390px;
 			background-image:url(https://i.giphy.com/OfVPEmY8GD75pQ5U9U.webp);
 			font:sans-serif;
 			position:relative;
 			border:10px solid maroon;
 			background-size:cover;
 			background-repeat: no-repeat;
+		}
+
+		body {
+			background-color:lightblue;
+		}
+
+		#moving-div{
+		width: 10px;
+		height: 10px;
+		background-color:white;
+		position: absolute;
+		animation-name: moving;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+
+	}
+
+		@keyframes moving{
+			0% {
+				top: 0px;
+				
+			}
+			100%{
+				top: 800px;
+				background-color:powderblue;
+			}
+
 		}
 
 	</style>
@@ -41,6 +71,8 @@
 
 </a>
 </center>
+
+<div id="moving-div"></div>
 
 </body>
 </html>
