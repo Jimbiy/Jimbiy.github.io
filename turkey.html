@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.turkey{
+			width:200px;
+			height:230px;
+			background-image:url(fweakingturkey.jpeg);
+			background-size:contain;
+			display:inline-block;
+			
+		}
+
+
+	</style>
+
+	<title></title>
+</head>
+<body>
+ 	<center>Turkey Timer</center>
+
+<script type="text/javascript">
+
+	let counter = 0;
+
+	function makeTurkey(){
+		let timer = document.createElement("div")
+
+		document.body.appendChild(timer)
+		timer.classList.add('turkey')
+		counter = counter + 1
+		timer.innerText = counter
+	}
+
+	setInterval(makeTurkey, 1000)
+
+</script>
+
+
+</body>
+</html>
