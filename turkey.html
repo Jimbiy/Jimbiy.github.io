@@ -11,12 +11,56 @@
 			
 		}
 
+		#bouncy{
+          width:100px;
+          height:100px;
+          background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQSyLNHHPK41seLQSoVVwneATefGv8dDCEdw&s);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;}
 
+           #bouncy1{
+          width:100px;
+          height:100px;
+          background-image:url(leaf3.jpeg);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;}
+
+           #bouncy2{
+          width:100px;
+          height:100px;
+          background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXPFmNnJXnVS7ykRtRxGZuVNcKGQnU4GrMRA&s);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;}
+
+           #bouncy3{
+          width:100px;
+          height:100px;
+          background-image:url(leaf2.jpeg);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;}
+
+           #bouncy4{
+          width:100px;
+          height:100px;
+          background-image:url(leaf1.jpeg);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;}
 	</style>
 
-	<title></title>
+	
 </head>
 <body>
+
  	<center>Turkey Timer</center>
 
 <script type="text/javascript">
@@ -25,7 +69,6 @@
 
 	function makeTurkey(){
 		let timer = document.createElement("div")
-
 		document.body.appendChild(timer)
 		timer.classList.add('turkey')
 		counter = counter + 1
@@ -37,5 +80,34 @@
 </script>
 
 
+</head>
+<body>
+<div id="bouncy"></div>
+<div id="bouncy1"></div>
+<div id="bouncy2"></div>
+<div id="bouncy3"></div>
+<div id="bouncy4"></div>
+<script type="text/javascript">
+console.log(Math.random())
+
+function move (){
+console.log(Math.random())
+bouncy.style.left = Math.random()*1200+ "px";
+bouncy.style.top = Math.random()*750+ "px";
+bouncy1.style.left = Math.random()*1200+ "px";
+bouncy1.style.top = Math.random()*750+ "px";
+bouncy2.style.left = Math.random()*1200+ "px";
+bouncy2.style.top = Math.random()*750+ "px";
+bouncy3.style.left = Math.random()*1200+ "px";
+bouncy3.style.top = Math.random()*750+ "px";
+bouncy4.style.left = Math.random()*1200+ "px";
+bouncy4.style.top = Math.random()*750+ "px";
+
+
+
+}
+
+setInterval(move, 400)
+</script>
 </body>
 </html>
