@@ -11,7 +11,9 @@
           position: absolute;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 50%;}
+          border-radius: 50%;
+          transition:1s;}
+
 
            #bouncy1{
           width:100px;
@@ -20,7 +22,8 @@
           position: absolute;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 50%;}
+          border-radius: 50%;
+      transition:1s;}
 
            #bouncy2{
           width:100px;
@@ -29,7 +32,8 @@
           position: absolute;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 50%;}
+          border-radius: 50%;
+      transition:1s;}
 
            #bouncy3{
           width:100px;
@@ -38,7 +42,8 @@
           position: absolute;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 50%;}
+          border-radius: 50%;
+      transition:1s;}
 
            #bouncy4{
           width:100px;
@@ -47,7 +52,8 @@
           position: absolute;
           background-size: cover;
           background-repeat: no-repeat;
-          border-radius: 50%;}
+          border-radius: 50%;
+      transition:1s;}
            
 
 </style>
@@ -75,11 +81,20 @@ bouncy3.style.top = Math.random()*750+ "px";
 bouncy4.style.left = Math.random()*1200+ "px";
 bouncy4.style.top = Math.random()*750+ "px";
 
-
-
+}
+function changecolor(){
+    let r = Math.random()*225
+    let g = Math.random()*225
+    let b = Math.random()*225
+    bouncy.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy1.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy2.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy3.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy4.style.backgroundColor = "rgb("+r+","+g+","+b+")"
 }
 
-setInterval(move, 400)
+setInterval(move, 1000)
+setInterval(changecolor,1000)
 
 </script>
 </body>
