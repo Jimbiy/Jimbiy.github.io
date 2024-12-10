@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+        #bouncy{
+          width:100px;
+          height:100px;
+          background-color: cyan;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+          transition:1s;}
+
+
+           #bouncy1{
+          width:100px;
+          height:100px;
+          background-color: lawngreen;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy2{
+          width:100px;
+          height:100px;
+          background-color: indianred;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy3{
+          width:100px;
+          height:100px;
+          background-color: mediumvioletred;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy4{
+          width:100px;
+          height:100px;
+          background-color: moccasin;
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+           
+
+</style>
+
+</head>
+<body>
+<div id="bouncy"></div>
+<div id="bouncy1"></div>
+<div id="bouncy2"></div>
+<div id="bouncy3"></div>
+<div id="bouncy4"></div>
+<script type="text/javascript">
+console.log(Math.random())
+
+function move (){
+console.log(Math.random())
+bouncy.style.left = Math.random()*1200+ "px";
+bouncy.style.top = Math.random()*750+ "px";
+bouncy1.style.left = Math.random()*1200+ "px";
+bouncy1.style.top = Math.random()*750+ "px";
+bouncy2.style.left = Math.random()*1200+ "px";
+bouncy2.style.top = Math.random()*750+ "px";
+bouncy3.style.left = Math.random()*1200+ "px";
+bouncy3.style.top = Math.random()*750+ "px";
+bouncy4.style.left = Math.random()*1200+ "px";
+bouncy4.style.top = Math.random()*750+ "px";
+
+}
+function changecolor(){
+    let r = Math.random()*225
+    let g = Math.random()*225
+    let b = Math.random()*225
+    bouncy.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy1.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy2.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy3.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+    bouncy4.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+}
+
+setInterval(move, 1000)
+setInterval(changecolor,1000)
+
+</script>
+</body>
+</html>
