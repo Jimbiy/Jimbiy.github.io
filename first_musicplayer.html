@@ -8,21 +8,25 @@
 			height:202px;
 			background-color:mediumpurple;
 			}
-
 		#square1{
 			width:202px;
 			height:202px;
 			background-color:limegreen;
 			}
-		
+		#square2{
+			width:202px;
+			height:202px;
+			background-color:steelblue;
+			}
 	</style>
-
 </head>
 <body>
 	<audio id="sound" src="Chop_Suey.m4a"></audio>
 	<audio id="sound1" src="Get_Back_Up.m4a"></audio>
+	<audio id="sound2" src="ATWA.m4a"></audio>
  <div id="square">Chop Suey</div>
  <div id="square1">Get back up</div>
+ <div id="square2">ATWA</div>
  <script type="text/javascript">
  	let lightswitch =true
  	square.addEventListener("click", function(){
@@ -31,36 +35,38 @@
  			sound.play()
  			lightswitch = false
  		}
-
-
  		else if (lightswitch==false){
  			square.style.backgroundColor="purple"
  			sound.pause()
  			lightswitch =true
  		}
- 
  	})
-
-
-
-
- 	let lightswitch2 =true
+ 	let lightswitch1 =true
  	square1.addEventListener("click", function(){
-		if (lightswitch2==true){
+		if (lightswitch1==true){
  			square1.style.backgroundColor="red"
  			sound1.play()
- 			lightswitch2 = false
+ 			lightswitch1 = false
  		}
-
-
- 		else if (lightswitch2==false){
+ 		else if (lightswitch1==false){
  			square1.style.backgroundColor="green"
  			sound1.pause()
- 			lightswitch2 =true
+ 			lightswitch1 =true
  		}
- 
  	})
-
+ 	let lightswitch3 =true
+ 	square2.addEventListener("click", function(){
+		if (lightswitch3==true){
+ 			square2.style.backgroundColor="blue"
+ 			sound2.play()
+ 			lightswitch2 = false
+ 		}
+ 		else if (lightswitch3==false){
+ 			square2.style.backgroundColor="yellow"
+ 			sound2.pause()
+ 			lightswitch3 =true
+ 		}
+ 	})
  </script>
 </body>
 </html>
