@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Player</title>
+	<style type="text/css">
+		#square{
+			width:202px;
+			height:202px;
+			background-color:mediumpurple;
+			}
+
+		#square1{
+			width:202px;
+			height:202px;
+			background-color:limegreen;
+			}
+		
+	</style>
+
+</head>
+<body>
+	<audio id="sound" src="Chop_Suey.m4a"></audio>
+	<audio id="sound1" src="Get_Back_Up.m4a"></audio>
+ <div id="square">Chop Suey</div>
+ <div id="square1">Get back up</div>
+ <script type="text/javascript">
+ 	let lightswitch =true
+ 	square.addEventListener("click", function(){
+		if (lightswitch==true){
+ 			square.style.backgroundColor="pink"
+ 			sound.play()
+ 			lightswitch = false
+ 		}
+
+
+ 		else if (lightswitch==false){
+ 			square.style.backgroundColor="purple"
+ 			sound.pause()
+ 			lightswitch =true
+ 		}
+ 
+ 	})
+
+
+
+
+ 	let lightswitch2 =true
+ 	square1.addEventListener("click", function(){
+		if (lightswitch2==true){
+ 			square1.style.backgroundColor="red"
+ 			sound1.play()
+ 			lightswitch2 = false
+ 		}
+
+
+ 		else if (lightswitch2==false){
+ 			square1.style.backgroundColor="green"
+ 			sound1.pause()
+ 			lightswitch2 =true
+ 		}
+ 
+ 	})
+
+ </script>
+</body>
+</html>
