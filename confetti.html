@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Confetti</title>
+	<style type="text/css">
+		.confetti{
+			width:10px;
+			height:10px;
+			background-color:white;
+			position:absolute;
+		}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function makeConfetti(){
+			let paper = document.createElement("div")
+			document.body.appendChild(paper)
+			paper.classList.add("confetti")
+			paper.style.top="0px"
+			paper.style.left="500px"
+
+			
+		function fall(){
+			if(parseInt(paper.style.top)>1000)
+				{paper.style.top="-100px"}
+			else{
+			paper.style.top=parseInt(paper.style.top) + Math.random()*100+"px"
+			paper.style.left= Math.random()*2000+"px"}
+		}
+
+		setInterval(fall, 100)
+		
+		
+
+		let r = Math.random()*255
+		let g = Math.random()*255
+		let b = Math.random()*255
+
+		paper.style.backgroundColor="rgb("+r+","+g+","+b+")";
+	}
+for(let i=0; i<1000; i++){
+	makeConfetti()
+}
+
+	</script>
+<div class="confetti"></div>
+</body>
+</html>
