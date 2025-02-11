@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<body style="background-color:black;">
+	<title>Confetti</title>
+	<style type="text/css">
+		.confetti{
+			width:10px;
+			height:10px;
+			background-color:white;
+			position:absolute;
+		}
+		#background{
+			width:350px;
+			height:150px;
+			background-color:red;
+			border-radius:7.5%;
+			font-weight:400;
+			font-style:normal;
+			text-align:center;
+			font-size:50px;
+		}
+			#name{
+			width:350px;
+			height:100px;
+			background-color:hotpink;
+			position:relative;
+			border-radius:7.5%;
+			font-weight:400;
+			font-style:normal;
+			text-align:center;
+			font-size:70px;
+		}
+#bouncy{
+          width:100px;
+          height:100px;
+          background-image:url(heart1.png);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+
+
+           #bouncy1{
+          width:100px;
+          height:100px;
+          background-image:url(heart2.jpeg);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy2{
+          width:100px;
+          height:100px;
+          background-image:url(heart3.png);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy3{
+          width:100px;
+          height:100px;
+          background-image:url(heart4.png);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+
+           #bouncy4{
+          width:100px;
+          height:100px;
+          background-image:url(heart5.png);
+          position: absolute;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+      transition:1s;}
+	</style>
+</head>
+<body>
+	<div class="confetti"></div>
+		<center> 
+	<div id="background">Happy Valentine's Day</div>
+	<div id="name">Mom!</div>
+			</center>
+	<div id="bouncy"></div>
+	<div id="bouncy1"></div>
+	<div id="bouncy2"></div>
+	<div id="bouncy3"></div>
+	<div id="bouncy4"></div>
+	<script type="text/javascript">
+		function makeConfetti(){
+			let paper = document.createElement("div")
+			document.body.appendChild(paper)
+			paper.classList.add("confetti")
+			paper.style.top="0px"
+			paper.style.left="500px"
+
+			
+		function fall(){
+			if(parseInt(paper.style.top)>1000)
+				{paper.style.top="-100px"}
+			else{
+			paper.style.top=parseInt(paper.style.top) + Math.random()*100+"px"
+			paper.style.left= Math.random()*2000+"px"}
+		}
+		
+
+		setInterval(fall, 100)
+		
+		let colors =["red","pink","indianred","rose"]
+
+	 	let random = Math.floor(Math.random()*colors.length)
+	 		paper.style.backgroundColor= colors[random]
+
+	 	}
+	 	
+for(let i=0; i<1000; i++){
+	makeConfetti()
+}
+	</script>
+	<script type="text/javascript">
+console.log(Math.random())
+
+function move (){
+console.log(Math.random())
+bouncy.style.left = Math.random()*1200+ "px";
+bouncy.style.top = Math.random()*750+ "px";
+bouncy1.style.left = Math.random()*1200+ "px";
+bouncy1.style.top = Math.random()*750+ "px";
+bouncy2.style.left = Math.random()*1200+ "px";
+bouncy2.style.top = Math.random()*750+ "px";
+bouncy3.style.left = Math.random()*1200+ "px";
+bouncy3.style.top = Math.random()*750+ "px";
+bouncy4.style.left = Math.random()*1200+ "px";
+bouncy4.style.top = Math.random()*750+ "px";
+
+
+
+}
+
+setInterval(move, 1000)
+</script>
+</body>
+</html>
