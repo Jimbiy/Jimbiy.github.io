@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowflakes Falling</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #2c3e50;
+        }
+
+        .snowflake {
+            position: relative;
+            color: white;
+            font-size: 24px;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+            }
+            100% {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // Function to generate snowflakes
+        function createSnowflakes() {
+            const snowflakeCount = 50; // Number of snowflakes to generate
+            const snowflakeChars = ['❄', '❅', '❆']; // Characters representing snowflakes
+
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                
+                // Randomly choose a snowflake character
+                snowflake.innerHTML = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
+
+                // Randomize the snowflake size
+                snowflake.style.fontSize = `${Math.random() * 24 + 12}px`;
+
+                // Position the snowflake randomly along the top of the screen
+                snowflake.style.left = `${Math.random() * window.innerWidth}px`;
+                snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random falling speed
+                snowflake.style.animationDelay = `${Math.random() * 5}s`; // Random delay for each snowflake
+
+                document.body.appendChild(snowflake);
+            }
+        }
+
+        // Call the function to create snowflakes when the page loads
+        window.onload = createSnowflakes;
+    </script>
+</body>
+</html>

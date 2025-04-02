@@ -2,116 +2,95 @@
 <html>
 <head>
 	<style type="text/css">
-
-		#projects{
-			width:300px;
-			height:370px;
-			background-image:url(https://media4.giphy.com/media/1BeVCTe1d43Yge9ejE/200w.gif?cid=6c09b9528zeird7pkywkavyfvuilt3o139l0iz8gilf1i485&ep=v1_gifs_search&rid=200w.gif);
-			font:sans-serif;
-			position:relative;
-			border:10px solid maroon;
-			background-size:cover;
+	
+		body{
+			background-color: #2c3e50;
+		}
+		#projects {
+			width: 300px;
+			height: 370px;
+			background-image: url(https://media4.giphy.com/media/1BeVCTe1d43Yge9ejE/200w.gif?cid=6c09b9528zeird7pkywkavyfvuilt3o139l0iz8gilf1i485&ep=v1_gifs_search&rid=200w.gif);
+			font: sans-serif;
+			position: relative;
+			border: 10px solid maroon;
+			background-size: cover;
 			background-repeat: no-repeat;
-			z-index: -5;
-
+			margin: 10px;
 		}
 
-		#journal{
-			width:300px;
-			height:370px;
-			background-image:url(https://i.giphy.com/OfVPEmY8GD75pQ5U9U.webp);
-			font:sans-serif;
-			position:relative;
-			border:10px solid maroon;
-			background-size:cover;
+		#journal {
+			width: 300px;
+			height: 370px;
+			background-image: url(https://i.giphy.com/OfVPEmY8GD75pQ5U9U.webp);
+			font: sans-serif;
+			position: relative;
+			border: 10px solid maroon;
+			background-size: cover;
 			background-repeat: no-repeat;
-			z-index: -5;
-
+			margin: 10px;
 		}
 
-		body {
-			background-color:lightblue;
+		.snowflake {
+			position: absolute;
+			color: white;
+			font-size: 24px;
+			animation: fall linear infinite;
+			top:-1000px;
 		}
 
-		.snowflakes{
-		top:0px;
-		width: 10px;
-		height: 10px;
-		background-color:white;
-		position: relative;
-		display:inline-block;
-		margin-right:50px;
-		animation-name: moving;
-		animation-duration: 7s;
-		animation-iteration-count: infinite;
-		z-index: 5;
-
-
-	}
-
-		@keyframes moving{
+		@keyframes fall {
 			0% {
-				top: 0px;
-				
+			top:-1000px;
+
 			}
-			100%{
-				top: 800px;
-				background-color:white;
+			100% {
+			top:1000px;
+
 			}
-
-		}
-
-		/*#moving-div1{
-		width: 10px;
-		height: 10px;
-		background-color:white;
-		position: absolute;
-		animation-name: moving;
-		animation-duration: 5s;
-		animation-iteration-count: infinite;
-
-	}*/
-
-		@keyframes moving{
-			0% {
-				top: 0px;
-				
-			}
-			100%{
-				top: 800px;
-				background-color:white;
-			}
-
 		}
 
 	</style>
 </head>
 <body>
 <center>
+	<a href="projects.html">
+		<div id="projects">Projects</div>
+	</a>
 
-<div class="snowflakes" id="moving-div0"></div>
-<div class="snowflakes" id="moving-div1"></div>
-<div class="snowflakes" id="moving-div2"></div>
-<div class="snowflakes" id="moving-div3"></div>
-<div class="snowflakes" id="moving-div4"></div>
-<div class="snowflakes" id="moving-div5"></div>
-<div class="snowflakes" id="moving-div6"></div>
-<div class="snowflakes" id="moving-div7"></div>
-<div class="snowflakes" id="moving-div8"></div>
-
-<a href="projects.html">
-
-<div id="projects">Projects</div>
-
-</a>
-
-
-<a href="journal.html">
-
-<div id="journal">Journal</div>
-
-</a>
+	<a href="journal.html">
+		<div id="journal">Journal</div>
+	</a>
 </center>
+	<script type="text/javascript">
+		// Function to generate snowflakes
+		function createSnowflakes() {
+			let snowflakeCount = 100; // Number of snowflakes to generate
+			let snowflakeChars = ['❄', '❅', '❆']; // Characters representing snowflakes
+
+			for (let i = 0; i < snowflakeCount; i++) {
+				let snowflake = document.createElement('div');
+				snowflake.classList.add('snowflake');
+				
+				
+				snowflake.innerHTML = snowflakeChars[Math.floor(Math.random() * snowflakeChars.length)];
+
+				
+				snowflake.style.fontSize = (Math.random() * 24) + 12+ "px";
+
+				
+				snowflake.style.left = (Math.random() * window.innerWidth) +"px";
+
+				
+				snowflake.style.animationDuration = (Math.random() * 2) + 2 + "s";  
+				snowflake.style.animationDelay = (Math.random() * 6) + "s"; 
+
+				document.body.appendChild(snowflake);
+			}
+		}
+
+		
+		createSnowflakes()
+	</script>
 
 </body>
 </html>
